@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>jQuery_scaffolding</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+
+<body>
+<div><button class="J_triggerBtn">hide</button></div>
+<div class="J_imgList" style="display:none">
+	<!-- <img src="http://pic1.vip.com/upload/brand/201408/20140820180745731512_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140819125012615512_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140819174441102112_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140819130405492212_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140818174719218912_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140818162620686212_454x218_70.jpg" alt="">
+	<img src="http://pic1.vip.com/upload/brand/201408/20140818161455494012_454x218_70.jpg" alt=""> -->
+	<img src="image/bg.jpg" alt="">
+</div>
+
+<script type="text/javascript">
+	var btn = $('.J_triggerBtn'), list = $('.J_imgList');
+	btn.on('click', function(){
+		console.log(+new Date);
+		if(list.is(':visible')){
+			$(this).text('show');
+			list.hide();
+		} else {
+			$(this).text('hide');
+			list.show();
+			console.log(+new Date);
+			setTimeout(function () {
+				console.log(+new Date);
+			}, 0)
+		}
+		
+	})
+</script>
+</body>
+</html>
